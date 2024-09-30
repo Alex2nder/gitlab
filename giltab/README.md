@@ -34,7 +34,33 @@
 
 ### Задание 2
 
+```
+stages:
+  - build
+  - test
+  - deploy
 
+build_job:
+  stage: build
+  script:
+    - echo "Building the project..."
+  tags:
+    - neto 
+
+test_job:
+  stage: test
+  script:
+    - echo "Running tests..."
+  tags:
+    - neto  
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo "Deploying the project..."
+  tags:
+    - neto 
+```
 
 
 ![Pipeline](img/neto_pipe.png)
